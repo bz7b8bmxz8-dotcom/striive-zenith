@@ -283,6 +283,7 @@
     border-bottom:1px solid var(--line-soft);
     padding:26px 0;
     cursor:pointer;
+    outline-offset: -2px;
   }
   .roster-row-top{
     display:grid;
@@ -442,6 +443,8 @@
     <a href="#training" class="navlink">Training</a>
     <a href="#community" class="navlink">Community</a>
     <a href="#follow" class="navlink">Follow</a>
+    <a href="#join" class="navlink">Join</a>
+    <a href="#join" class="btn" style="display:inline-flex; margin-top:8px;">応募する</a>
   </nav>
   <div style="display:flex; align-items:center; gap:14px;">
     <a href="#join" class="btn ghost">応募する</a>
@@ -560,7 +563,7 @@
 
       <div class="roster reveal" id="roster">
 
-        <div class="roster-row" data-open="false">
+        <div class="roster-row" data-open="false" tabindex="0" role="button" aria-expanded="false">
           <div class="roster-row-top">
             <div class="roster-name">美原 颯太<span class="romaji">Sota Mihara</span></div>
             <div><span class="roster-meta-label">Main event</span><span class="roster-meta-value">800m</span></div>
@@ -571,7 +574,7 @@
           <div class="roster-detail"><p class="roster-detail-inner">夢を追う人を応援する。個人としても自己ベストを着実に更新していきたい。</p></div>
         </div>
 
-        <div class="roster-row" data-open="false">
+        <div class="roster-row" data-open="false" tabindex="0" role="button" aria-expanded="false">
           <div class="roster-row-top">
             <div class="roster-name">〇〇 〇〇<span class="romaji">〇〇 〇〇</span></div>
             <div><span class="roster-meta-label">Main event</span><span class="roster-meta-value">Marathon</span></div>
@@ -582,7 +585,7 @@
           <div class="roster-detail"><p class="roster-detail-inner"></p></div>
         </div>
 
-        <div class="roster-row" data-open="false">
+        <div class="roster-row" data-open="false" tabindex="0" role="button" aria-expanded="false">
           <div class="roster-row-top">
             <div class="roster-name">〇〇 〇〇<span class="romaji">〇〇 〇〇</span></div>
             <div><span class="roster-meta-label">Main event</span><span class="roster-meta-value">1500m</span></div>
@@ -593,7 +596,7 @@
           <div class="roster-detail"><p class="roster-detail-inner"></p></div>
         </div>
 
-        <div class="roster-row" data-open="false">
+        <div class="roster-row" data-open="false" tabindex="0" role="button" aria-expanded="false">
           <div class="roster-row-top">
             <div class="roster-name">〇〇 〇〇<span class="romaji">〇〇 〇〇</span></div>
             <div><span class="roster-meta-label">Main event</span><span class="roster-meta-value">10000m</span></div>
@@ -614,7 +617,7 @@
       <div class="section-head reveal">
         <p class="eyebrow-en">Follow along</p>
         <h2 class="section-title">日々の景色は、Instagramで。</h2>
-        <p class="section-lede">練習や大会の記録は <a href="https://www.instagram.com/zenith_run1/" target="_blank" rel="noopener" style="color:var(--tan); border-bottom:1px solid var(--line);">@zenith_run1</a> で更新中。</p>
+        <p class="section-lede">練習や大会の記録は <a href="https://www.instagram.com/zenith_run1/" target="_blank" rel="noopener" style="color:var(--tan); border-bottom:1px solid var(--line);">@zenith_run1</a> で更新中。投稿はこのページにも自動で反映されます。</p>
       </div>
 
       <div class="ig-feed reveal" id="igFeed">
@@ -639,17 +642,36 @@
       </div>
 
       <div class="reveal" style="display:grid; grid-template-columns: 1fr; gap:60px;">
-        <div class="criteria-box" style="max-width:520px;">
-          <p class="criteria-label">参加基準の目安（募集：若干名）</p>
-          <div class="criteria-row">
-            <span class="criteria-event">1000m</span>
-            <span class="criteria-time">3:00 <span style="font-size:13px; color:var(--tan-dim);">以内</span></span>
+        <div style="display:flex; flex-wrap:wrap; gap:24px;">
+          <div class="criteria-box" style="max-width:520px; flex:1 1 320px;">
+            <p class="criteria-label">参加基準の目安（募集：若干名）</p>
+            <div class="criteria-row">
+              <span class="criteria-event">1000m</span>
+              <span class="criteria-time">3:00 <span style="font-size:13px; color:var(--tan-dim);">以内</span></span>
+            </div>
+            <div class="criteria-row">
+              <span class="criteria-event">5000m</span>
+              <span class="criteria-time">17:30 <span style="font-size:13px; color:var(--tan-dim);">以内</span></span>
+            </div>
+            <p class="criteria-note">タイムだけで機械的に判断することはありません。</p>
           </div>
-          <div class="criteria-row">
-            <span class="criteria-event">5000m</span>
-            <span class="criteria-time">17:30 <span style="font-size:13px; color:var(--tan-dim);">以内</span></span>
+
+          <div class="criteria-box" style="max-width:520px; flex:1 1 320px;">
+            <p class="criteria-label">練習日程</p>
+            <div class="criteria-row">
+              <span class="criteria-event">頻度</span>
+              <span class="criteria-time" style="font-size:1rem;">月1〜2回</span>
+            </div>
+            <div class="criteria-row">
+              <span class="criteria-event">場所</span>
+              <span class="criteria-time" style="font-size:1rem;">未定</span>
+            </div>
+            <div class="criteria-row">
+              <span class="criteria-event">時間</span>
+              <span class="criteria-time" style="font-size:1rem;">午前中を予定</span>
+            </div>
+            <p class="criteria-note">詳細は今後お知らせします。</p>
           </div>
-          <p class="criteria-note">タイムだけで機械的に判断することはありません。</p>
         </div>
 
         <form class="apply" id="applyForm">
@@ -757,10 +779,20 @@
 
   // Roster accordion
   document.querySelectorAll('.roster-row').forEach(row => {
-    row.addEventListener('click', () => {
+    const toggle = () => {
       const isOpen = row.classList.contains('open');
-      document.querySelectorAll('.roster-row.open').forEach(r => { if (r !== row) r.classList.remove('open'); });
+      document.querySelectorAll('.roster-row.open').forEach(r => {
+        if (r !== row) { r.classList.remove('open'); r.setAttribute('aria-expanded', 'false'); }
+      });
       row.classList.toggle('open', !isOpen);
+      row.setAttribute('aria-expanded', String(!isOpen));
+    };
+    row.addEventListener('click', toggle);
+    row.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+        e.preventDefault();
+        toggle();
+      }
     });
   });
 
@@ -790,7 +822,6 @@
       (data.get('msg') || '')
     ];
     const body = encodeURIComponent(bodyLines.join('\n'));
-    // NOTE: replace RECRUIT_EMAIL below with the team's real inbox before launch.
     const RECRUIT_EMAIL = 'sataimeiyuan69@gmail.com';
     window.location.href = `mailto:${RECRUIT_EMAIL}?subject=${subject}&body=${body}`;
     status.textContent = 'メールアプリを起動しています…起動しない場合は、直接ご連絡ください。';
